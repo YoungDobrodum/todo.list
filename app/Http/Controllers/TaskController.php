@@ -68,27 +68,35 @@ class TaskController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Task $task)
     {
-        //
+        return view('tasks.edit', ['task' => $task]);
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Task $task
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Task $task)
     {
-        //
+        $this->authorize('owner', $task);
+        $this->validate($request,[
+            'name' => 'required | max:255 | min:5'
+        ]);
+        $task->name = $request->name;
+        $task->save();
+
+        return redirect(route('task.index'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Task $task
      * @return \Illuminate\Http\Response
      */
     public function destroy(Task $task)

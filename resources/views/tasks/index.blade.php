@@ -33,7 +33,10 @@
                         </td>
                         <td>
                             <div style="display: flex">
-                                <form action="">
+                                <form action="{{route('task.edit', $task->id)}}" method="POST">
+                                    {{csrf_field()}}
+                                    {{method_field('GET')}}
+
                                     <button class="btn btn-secondary">Edit</button>
                                 </form>
                                 <form action="{{route('task.destroy', $task->id)}}" method="POST">
