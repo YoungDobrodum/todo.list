@@ -12,13 +12,7 @@
 
     @if(count($tasks)>0)
         <div class="container">
-        <div>
             <h3>Dashboard</h3>
-            <figcaption class="blockquote-footer">
-                    These are all your tasks for today.
-            </figcaption>
-
-        </div>
 
             <div class="panel panel-default">
 
