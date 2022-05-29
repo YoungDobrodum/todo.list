@@ -27,8 +27,8 @@
 </head>
 <body id="app-layout">
 <div class="container">
-    <nav class="navbar navbar-expand-lg bg-light ">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg" >
+        <div class="container-fluid" style="background-color: #ffffff;">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -72,9 +72,19 @@
             </div>
         </div>
     </nav>
+
+
+
+    @yield('content')
+
+    <footer class="fixed-bottom bg-light text-center text-lg-start">
+        <div class="text-center p-1" style="background-color: #e8e8e8; ">
+            © 2022 Young Dobrodum Inc | Hello, we are from Ukraine
+        </div>
+    </footer>
 </div>
 
-@yield('content')
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

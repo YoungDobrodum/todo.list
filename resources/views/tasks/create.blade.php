@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="panel-body">
+
 
     @include('common.errors')
 
@@ -17,13 +17,12 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 10px;">
                 <div class="col-sm-offset-3 col-sm-6">
-                    <button type="submit" class="btn btn-default">
+                    <button class="btn btn-primary">
                         <i class="fa fa-plus"></i> Create
                     </button>
                 </div>
             </div>
         </form>
-    </div>
 @endsection

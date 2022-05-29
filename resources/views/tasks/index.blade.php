@@ -58,7 +58,7 @@
 
             </div>
             @endif
-            <a href="{{route('task.create')}}"><button class="btn btn-primary">Add new task</button></a>
+            <a href="{{route('task.create')}}"><button class="btn btn-primary"><i class="fa fa-plus"></i> Add new task</button></a>
         </div>
 
 
